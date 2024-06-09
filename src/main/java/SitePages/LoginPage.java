@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 
 public class LoginPage {
     private WebDriver driver;
-
-//    By checkbox = By.xpath("//*[@id=\"challenge-stage\"]/div/label/input");
     By emailField = By.xpath("//*[@id=\"Email\"]");
     By passwordField = By.xpath("//*[@id=\"Password\"]");
     By loginButton = By.xpath("//*[@id=\"main\"]/div/div/div/div[2]/div[1]/div[2]/form/div[3]/button");
@@ -31,10 +29,4 @@ public class LoginPage {
         return driver.findElement(resultText).getText();
     }
 
-//    public void verification()
-//    {
-//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-//        wait.until(ExpectedConditions.presenceOfElementLocated(checkbox));
-//        driver.findElement(checkbox).click();
-//    }
 }

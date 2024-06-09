@@ -20,6 +20,10 @@ public class HomePage {
         clickLink("Register");
         return new RegisterPage(driver);
     }
+    public SearchPage search()
+    {
+        return new SearchPage(driver);
+    }
 //    public LoginPage hoverOverFigure()
 //    {
 //        WebElement figure = driver.findElement(accountFigure);
