@@ -24,6 +24,18 @@ public class HomePage {
     {
         return new SearchPage(driver);
     }
+    public ChangeCurrencyPage currency()
+    {
+        return new ChangeCurrencyPage(driver);
+    }
+    public WishListPage wishList()
+    {
+        return new WishListPage(driver);
+    }
+    public ShoppingCartPage shoppingCart()
+    {
+        return new ShoppingCartPage(driver);
+    }
 //    public LoginPage hoverOverFigure()
 //    {
 //        WebElement figure = driver.findElement(accountFigure);

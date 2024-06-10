@@ -4,12 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5f19a5d-ce21-41e0-a132-a84ac8bc3cff" name="Changes" comment="Login and Register tests added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/SitePages/SearchPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/search/SearchTests.java" afterDir="false" />
+    <list default="true" id="f5f19a5d-ce21-41e0-a132-a84ac8bc3cff" name="Changes" comment="Search tests added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/SitePages/ChangeCurrencyPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/SitePages/ShoppingCartPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/SitePages/WishListPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/currency/CurrencyTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/shoppingCart/ShoppingCartTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/wishList/WishListTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SitePages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SitePages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SitePages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SitePages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SitePages/SearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SitePages/SearchPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/BaseTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/BaseTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/search/SearchTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/search/SearchTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,12 +64,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.CurrencyTests.TestChangeCurrency.executor": "Run",
     "TestNG.LoginTests.TestSuccessfulLogin.executor": "Run",
     "TestNG.LoginTests.executor": "Run",
     "TestNG.RegisterTests.TestSuccessfulRegister.executor": "Run",
     "TestNG.RegisterTests.executor": "Run",
     "TestNG.SearchTests.TestSuccessfulSearch.executor": "Run",
     "TestNG.SearchTests.executor": "Run",
+    "TestNG.ShoppingCartTests.TestAddToCart.executor": "Run",
+    "TestNG.ShoppingCartTests.TestRemoveAllItems.executor": "Run",
+    "TestNG.ShoppingCartTests.TestShoppingCartIsEmpty.executor": "Run",
+    "TestNG.WishListTests.TestAddToWishList.executor": "Run",
+    "TestNG.WishListTests.TestRemoveAllItems.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/intellij Projects/NopCommerce/resources",
@@ -75,52 +87,31 @@
       <recent name="D:\intellij Projects\NopCommerce\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SearchTests">
-    <configuration name="LoginTests" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.ShoppingCartTests.TestAddToCart">
+    <configuration name="BaseTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="base.BaseTests" />
       <module name="NopCommerce" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="login.*" />
+          <option name="PATTERN" value="base.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="login" />
-      <option name="MAIN_CLASS_NAME" value="login.LoginTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegisterTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ShoppingCartTests.TestAddToCart" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="NopCommerce" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="register.*" />
+          <option name="PATTERN" value="shoppingCart.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="register" />
-      <option name="MAIN_CLASS_NAME" value="register.RegisterTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegisterTests.TestSuccessfulRegister" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="NopCommerce" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="register.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="register" />
-      <option name="MAIN_CLASS_NAME" value="register.RegisterTests" />
-      <option name="METHOD_NAME" value="TestSuccessfulRegister" />
+      <option name="PACKAGE_NAME" value="shoppingCart" />
+      <option name="MAIN_CLASS_NAME" value="shoppingCart.ShoppingCartTests" />
+      <option name="METHOD_NAME" value="TestAddToCart" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -128,34 +119,53 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ShoppingCartTests.TestRemoveAllItems" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="NopCommerce" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="search.*" />
+          <option name="PATTERN" value="shoppingCart.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="search" />
-      <option name="MAIN_CLASS_NAME" value="search.SearchTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PACKAGE_NAME" value="shoppingCart" />
+      <option name="MAIN_CLASS_NAME" value="shoppingCart.ShoppingCartTests" />
+      <option name="METHOD_NAME" value="TestRemoveAllItems" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchTests.TestSuccessfulSearch" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ShoppingCartTests.TestShoppingCartIsEmpty" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="NopCommerce" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="search.*" />
+          <option name="PATTERN" value="shoppingCart.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="search" />
-      <option name="MAIN_CLASS_NAME" value="search.SearchTests" />
-      <option name="METHOD_NAME" value="TestSuccessfulSearch" />
+      <option name="PACKAGE_NAME" value="shoppingCart" />
+      <option name="MAIN_CLASS_NAME" value="shoppingCart.ShoppingCartTests" />
+      <option name="METHOD_NAME" value="TestShoppingCartIsEmpty" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WishListTests.TestRemoveAllItems" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="NopCommerce" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="wishList.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="wishList" />
+      <option name="MAIN_CLASS_NAME" value="wishList.WishListTests" />
+      <option name="METHOD_NAME" value="TestRemoveAllItems" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -165,11 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.SearchTests" />
-        <item itemvalue="TestNG.SearchTests.TestSuccessfulSearch" />
-        <item itemvalue="TestNG.LoginTests" />
-        <item itemvalue="TestNG.RegisterTests" />
-        <item itemvalue="TestNG.RegisterTests.TestSuccessfulRegister" />
+        <item itemvalue="TestNG.ShoppingCartTests.TestAddToCart" />
+        <item itemvalue="TestNG.ShoppingCartTests.TestRemoveAllItems" />
+        <item itemvalue="TestNG.ShoppingCartTests.TestShoppingCartIsEmpty" />
+        <item itemvalue="Application.BaseTests" />
+        <item itemvalue="TestNG.WishListTests.TestRemoveAllItems" />
       </list>
     </recent_temporary>
   </component>
@@ -213,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717802387329</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Search tests added">
+      <option name="closed" value="true" />
+      <created>1717937844015</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717937844015</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -230,6 +248,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initializing project" />
     <MESSAGE value="Login and Register tests added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login and Register tests added" />
+    <MESSAGE value="Search tests added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Search tests added" />
   </component>
 </project>

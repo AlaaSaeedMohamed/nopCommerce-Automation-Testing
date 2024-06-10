@@ -33,20 +33,20 @@ public class BaseTests {
         webDriver.get("https://demo.nopcommerce.com/");
         homePage = new HomePage(webDriver);
     }
-    @AfterMethod
-    public void takeScreenshot()
-    {
-        var camera = (TakesScreenshot)webDriver;
-        File screenshot = camera.getScreenshotAs(OutputType.FILE);
-        System.out.println("Screenshot taken: " + screenshot.getAbsolutePath());
-        try{
-            Files.move(Paths.get(screenshot.getAbsolutePath()), Paths.get("resources/screenshots/" + screenshot.getName()));
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-    }
+//    @AfterMethod
+//    public void takeScreenshot()
+//    {
+//        var camera = (TakesScreenshot)webDriver;
+//        File screenshot = camera.getScreenshotAs(OutputType.FILE);
+//        System.out.println("Screenshot taken: " + screenshot.getAbsolutePath());
+//        try{
+//            Files.move(Paths.get(screenshot.getAbsolutePath()), Paths.get("resources/screenshots/" + screenshot.getName()));
+//        }
+//        catch (IOException e)
+//        {
+//            e.printStackTrace();
+//        }
+//    }
     public static void main(String args[])
     {
         BaseTests test = new BaseTests();

@@ -1,12 +1,8 @@
 package search;
 
-import SitePages.HomePage;
-import SitePages.LoginPage;
 import SitePages.SearchPage;
 import base.BaseTests;
 import org.testng.annotations.Test;
-
-import java.util.Base64;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
@@ -18,6 +14,13 @@ public class SearchTests extends BaseTests {
         SearchPage searchPage = homePage.search();
         searchPage.setSearchString("book");
         searchPage.clickSearchButton();
+        searchPage.scroll(1000);
+//        try {
+//            Thread.sleep(1000);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
+        System.out.println(searchPage.getResult());
         assertTrue(searchPage.getResult() > 0);
     }
     @Test
