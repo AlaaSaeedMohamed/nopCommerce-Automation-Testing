@@ -12,14 +12,9 @@ public class SearchTests extends BaseTests {
     public void TestSuccessfulSearch()
     {
         SearchPage searchPage = homePage.search();
-        searchPage.setSearchString("book");
+        searchPage.setSearchString("laptop");
         searchPage.clickSearchButton();
-        searchPage.scroll(1000);
-//        try {
-//            Thread.sleep(1000);
-//        } catch (InterruptedException e) {
-//            throw new RuntimeException(e);
-//        }
+        homePage.scroll(1000);
         System.out.println(searchPage.getResult());
         assertTrue(searchPage.getResult() > 0);
     }

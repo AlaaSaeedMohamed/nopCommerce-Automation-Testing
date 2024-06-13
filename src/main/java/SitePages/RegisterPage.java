@@ -1,9 +1,12 @@
 package SitePages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 
 public class RegisterPage {
@@ -18,9 +21,9 @@ public class RegisterPage {
     By confirmPasswordField = By.xpath("//*[@id=\"ConfirmPassword\"]");
     public By resultText = By.xpath("//*[@id=\"main\"]/div/div/div/div[2]/div[1]");
     public By errorText = By.xpath("//*[@id=\"main\"]/div/div/div/div[2]/form/div[1]/ul/li");
+    //public By continueButton = By.xpath("//*[@id=\"main\"]/div/div/div/div[2]/div[2]/a");
 
     By registerButton = By.xpath("//*[@id=\"register-button\"]");
-    //By resultText = By.xpath("//*[@id=\"main\"]/div/div/div/div[2]/div[1]/div[2]/form/div[1]");
     public RegisterPage(WebDriver driver){
         this.driver = driver;
     }
@@ -59,14 +62,13 @@ public class RegisterPage {
     {
         driver.findElement(registerButton).click();
     }
-
-    public void scrollDown(int number)
-    {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0," + number + ")", "");
-    }
     public String getResult(By result)
     {
         return driver.findElement(result).getText();
+    }
+    public void WaitForVisible(By element)
+    {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(element));
     }
 }

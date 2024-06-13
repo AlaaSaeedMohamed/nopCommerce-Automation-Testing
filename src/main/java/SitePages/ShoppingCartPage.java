@@ -1,11 +1,13 @@
 package SitePages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.List;
 
 public class ShoppingCartPage {
@@ -16,6 +18,7 @@ public class ShoppingCartPage {
     public By emptyResult = By.xpath("//*[@id=\"main\"]/div/div/div/div[2]/div/div");
     public By emptyCart = By.xpath("//*[@id=\"flyout-cart\"]/div/div");
     By cartFigure = By.xpath("//*[@id=\"topcartlink\"]");
+    By close = By.xpath("//*[@id=\"bar-notification\"]/div/span");
     public ShoppingCartPage(WebDriver driver)
     {
         this.driver = driver;
@@ -56,11 +59,6 @@ public class ShoppingCartPage {
             }
         }
     }
-    public void scroll(int number)
-    {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0," + number + ")", "");
-    }
     public String getResult(By result)
     {
         return driver.findElement(result).getText();
@@ -71,5 +69,19 @@ public class ShoppingCartPage {
         Actions actions = new Actions(driver);
         actions.moveToElement(figure).perform();
         return new ShoppingCartPage(driver);
+    }
+    public void closeButton()
+    {
+        driver.findElement(close).click();
+    }
+    public void WaitForLoading()
+    {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.elementToBeClickable(AddToCartButton));
+    }
+    public void WaitForVisible(By element)
+    {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(element));
     }
 }

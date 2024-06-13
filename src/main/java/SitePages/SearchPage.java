@@ -1,7 +1,6 @@
 package SitePages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 public class SearchPage {
@@ -34,10 +33,5 @@ public class SearchPage {
     }
     public void alert_clickToAccept(){
         driver.switchTo().alert().accept();
-    }
-    public void scroll(int number)
-    {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0," + number + ")", "");
     }
 }

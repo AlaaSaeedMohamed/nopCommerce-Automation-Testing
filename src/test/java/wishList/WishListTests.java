@@ -6,7 +6,6 @@ import base.BaseTests;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
 
 public class WishListTests extends BaseTests {
     @Test
@@ -15,14 +14,9 @@ public class WishListTests extends BaseTests {
         SearchPage searchPage = homePage.search();
         searchPage.setSearchString("laptop");
         searchPage.clickSearchButton();
-        searchPage.scroll(1000);
-        try {
-            Thread.sleep(2000);
-        }
-        catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        homePage.scroll(1000);
         WishListPage wishListPage = homePage.wishList();
+        wishListPage.WaitForLoading();
         wishListPage.AddToWishList();
     }
 
@@ -32,13 +26,8 @@ public class WishListTests extends BaseTests {
         String emptyList = "The wishlist is empty!";
         TestAddToWishList();
         WishListPage wishListPage = homePage.wishList();
-        wishListPage.scroll(-1000);
-        try {
-            Thread.sleep(2000);
-        }
-        catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        homePage.scroll(-1000);
+        wishListPage.closeButton();
         wishListPage.goToWishList();
         wishListPage.removeItemsFromWishList();
         assertEquals(wishListPage.getResult(), emptyList, "Incorrect");

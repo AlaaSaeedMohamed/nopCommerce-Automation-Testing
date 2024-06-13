@@ -1,6 +1,7 @@
 package SitePages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 public class HomePage {
@@ -36,13 +37,24 @@ public class HomePage {
     {
         return new ShoppingCartPage(driver);
     }
-//    public LoginPage hoverOverFigure()
-//    {
-//        WebElement figure = driver.findElement(accountFigure);
-//        Actions actions = new Actions(driver);
-//        actions.moveToElement(figure).perform();
-//        return new LoginPage(driver);
-//    }
+    public CheckOutPage checkOut()
+    {
+        return new CheckOutPage(driver);
+    }
+    public void scroll(int number)
+    {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0," + number + ")", "");
+    }
+    public void wait(int duration)
+    {
+        try {
+            Thread.sleep(duration);
+        }
+        catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
     private void clickLink(String linkText)
     {
         driver.findElement(By.linkText(linkText)).click();
